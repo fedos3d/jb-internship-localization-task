@@ -1,6 +1,7 @@
 import kotlinx.html.html
 import kotlinx.html.stream.appendHTML
 import java.time.LocalDate
+import java.util.*
 
 fun main() {
     /**
@@ -13,7 +14,7 @@ fun main() {
     // You can provide any data as the parameter of FailedPaymentEmail to ensure the email was localized correctly
     val email = FailedPaymentEmail(provideFakedDataPersonal())
 
-    println(StringBuilder().appendHTML().html { email.buildContent(this, Languages.RU) })
+    println(StringBuilder().appendHTML().html { email.buildContent(this, Locale.forLanguageTag("RU")) })
 }
 
 private fun provideFakedDataPersonal() = FailedPaymentData(
