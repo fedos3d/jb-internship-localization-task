@@ -13,4 +13,5 @@ repositories {
 dependencies {
     implementation(kotlin("stdlib"))
     implementation("org.jetbrains.kotlinx:kotlinx-html-jvm:0.7.2")
+    implementation("com.ibm.icu:icu4j:69.1");
 }
